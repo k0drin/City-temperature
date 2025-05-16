@@ -7,6 +7,7 @@ router.register(r'city', CityViewSet, basename='city')
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('city/<int:city_id>/setTemperature/', CityViewSet.set_temperature, name='set_temperature'),
     path('stats/', get_stats),
 ]
 
